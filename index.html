@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта терруаров хмелеводства России</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>ХМЕЛЬ - ЗЕЛЕНОЕ ЗОЛОТО РОССИИ</h1>
+            <p>Интерактивная карта терруаров по возделыванию хмеля и производства хмелесырья</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="scenario-buttons" id="scenarioButtons"></div>
+            <div id="scenarioInfo" style="display:none;"></div>
+        </div>
+
+        <div id="infoText" style="display:none;" class="info-text">
+            <p>Развитие международных связей, расширение сети дистрибуции и поиск новых рынков сбыта укрепят позиции России на международном рынке, а внедрение строгого контроля качества на всех этапах — от производства до торговли — обеспечит высокий стандарт продукции ХПП. При этом реализация этих планов невозможна без комплексного подхода, включающего разработку специализированных программ и использование экономических инструментов, таких как налоговые льготы, субсидии и инвестиционные стимулы</p>
+            <div class="sources">
+                <p>Источник 1: <a href="https://belta.by" target="_blank">belta.by</a></p>
+                <p>Источник 2: <a href="https://profapkbrest.by" target="_blank">profapkbrest.by</a></p>
+            </div>
+        </div>
+
+        <div id="mapCard" class="card" style="display:none;">
+            <h3 style="text-align: center; color: #065f46; margin-bottom: 1rem; font-size: 24px; font-weight: bold; text-shadow: 0 0 10px rgba(5, 150, 105, 0.5);">Карта России</h3>
+            <div class="map-container">
+                <svg viewBox="0 0 1000 600" id="mapSvg"></svg>
+                <div id="regionInfo" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- ТАБЛИЦА ДАННЫХ -->
+        <div id="dataTableCard" class="card" style="display:none;">
+            <div class="table-wrapper">
+                <div class="table-header">
+                    <h3 id="tableTitle"></h3>
+                </div>
+                <div class="table-scroll">
+                    <table id="dataTable" class="data-table">
+                        <thead>
+                            <tr id="tableHeaderRow"></tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="chartCard" class="card" style="display:none;">
+            <div class="chart-container">
+                <h3 id="chartTitle"></h3>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+        <div class="bottom-buttons">
+            <button class="btn btn-action" onclick="showContacts()">
+                <span>☰</span> Меню
+            </button>
+            <button class="btn btn-action" onclick="showPresentation()">
+                <span>📄</span> Атлас
+            </button>
+        </div>
+    </div>
+
+    <div id="contactsModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="hideContacts()">×</button>
+            <h2>Контакты</h2>
+            <div class="contact-item">
+                <p>Email:</p>
+                <p>okarataeva@rgau-msha.ru</p>
+            </div>
+            <div class="contact-item">
+                <p>Телефон:</p>
+                <p>+7 (903) 123-02-84</p>
+            </div>
+            <div class="contact-item">
+                <p>Руководитель проекта:</p>
+                <p>Каратаева Оксана Григорьевна</p>
+            </div>
+            <div class="contact-item">
+                <p>Разработчики:</p>
+                <p class="contact-item-new">Бахмутов Егор Дмитриевич</p>
+                <p class="contact-item-new">Фролов Егор Алексеевич</p>
+            </div>  
+        </div>
+    </div>
+
+    <div id="presentationModal" class="modal">
+        <div class="modal-content" style="max-width: 900px;">
+            <button class="close-btn" onclick="hidePresentation()">×</button>
+            <h2>Презентация</h2>
+            <div style="padding: 3rem; text-align: center; background: linear-gradient(to bottom right, #f0fdf4, #d1fae5); border-radius: 0.75rem;">
+                <div style="font-size: 4rem; margin-bottom: 1rem; color: #059669;">📄</div>
+                <p style="font-size: 1.125rem; color: #374151; margin-bottom: 1.5rem;">Презентация доступна по ссылке:</p>
+                <a href="https://disk.yandex.ru/i/gR_8gcioLXbhng" target="_blank" 
+                   style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(to right, #059669, #10b981); color: white; text-decoration: none; border-radius: 0.75rem; font-weight: bold; box-shadow: 0 10px 15px rgba(0,0,0,0.1); transition: all 0.3s;"
+                   onmouseover="this.style.transform='scale(1.05)'"
+                   onmouseout="this.style.transform='scale(1)'">
+                    Открыть презентацию
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
