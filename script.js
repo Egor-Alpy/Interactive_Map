@@ -352,9 +352,9 @@ function showRegionInfo(name) {
         <button class="close-btn" onclick="closeRegionInfo()">×</button>
         <h3>${name}</h3>
         <div style="margin-top: 0.5rem;">
-            <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">
-                <span style="font-weight: 600; color: #374151;">Площадь закладки (2025):</span>
-                <span style="margin-left: 0.25rem; color: #059669; font-weight: bold; white-space: nowrap;">${data[0]} га</span>
+            <p style="font-size: 0.875rem; margin-bottom: 0.5rem; display: flex; flex-wrap: nowrap; align-items: baseline;">
+                <span style="font-weight: 600; color: #374151; white-space: nowrap;">Площадь закладки (2025):</span>
+                <span style="margin-left: 0.25rem; color: #059669; font-weight: bold; white-space: nowrap;">370&nbsp;га</span>
             </p>
             <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">
                 <span style="font-weight: 600; color: #374151;">Прогноз (2035):</span>
@@ -487,5 +487,6 @@ window.onclick = function(event) {
 
 
 init();
+
 
 
