@@ -354,11 +354,11 @@ function showRegionInfo(name) {
         <div style="margin-top: 0.5rem;">
             <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">
                 <span style="font-weight: 600; color: #374151;">Площадь закладки (2025):</span>
-                <span style="margin-left: 0.25rem; color: #059669; font-weight: bold;">${data[0]} га</span>
+                <span style="margin-left: 0.05rem; color: #059669; font-weight: bold;">${data[0]} га</span>
             </p>
             <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">
                 <span style="font-weight: 600; color: #374151;">Прогноз (2035):</span>
-                <span style="margin-left: 0.5rem; color: #059669; font-weight: bold;">${data[10]} га</span>
+                <span style="margin-left: 0.05rem; color: #059669; font-weight: bold;">${data[10]} га</span>
             </p>
             <div style="padding-top: 0.5rem; border-top: 1px solid #e5e7eb;">
                 <p style="font-size: 0.75rem; color: #4b5563;">
@@ -487,3 +487,4 @@ window.onclick = function(event) {
 
 
 init();
+
